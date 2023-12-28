@@ -1,7 +1,9 @@
 const fs = require('fs')
 
 // ************************  create, write and append a file *****************
+//*********** */ Once and writefilesync is created is it needed to comment because if we don't comment it always create a new file and append the data in the same 
 // fs.writeFileSync('./test.txt',"Welcome ")
+//****************************************** */
 // fs.appendFileSync('./test.txt',`How are you \n`)
 // fs.stat('./test.txt', (err, stats) => {
 //     if (err) {
