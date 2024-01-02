@@ -11,7 +11,7 @@
 //When we type localhost:8000 on chrome it returns client requested on console
 
 const http=require ('http')
-const server=http.createServer((req,res)=>{
+const server=http.createServer((req,res)=>{          //Creating a server
    if(req.url==='/' || req.url==='home'){
     res.end("<h1>You are on home page</h1>") //It result to client on browser
 }
@@ -25,6 +25,6 @@ else{
     res.end("<h1>Your page is not found</h1>")
 }
 })
-server.listen(8000,()=>{                     //8000 is the value of server if you search for       localhost:8000 then you will be redirected to this page
+server.listen(8000,()=>{                     //8000 is the value of server if you search for localhost:8000 then you will be redirected to this page
     console.log("Server Started")
 })
