@@ -53,7 +53,7 @@ app.patch("/api/users/:id",(req,res)=>{
     Object.assign(user,req.body)
     users[i]=user
     fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-        return res.json({ status: "User updated successfully" })
+        return res.json({ status: "Success", message: "User updated successfully"})
     });
 })    // ************* END
 
@@ -71,7 +71,7 @@ app.delete("/api/users/:id",(req,res)=>{
         });
     }
     const i=users.indexOf(user)
-    users.splice(i,1)   //1 is used to delete one data (If we have to delete more data inc. value)
+    users.splice(i,1)   //1 is used to delete one data (If we have to delete more data increase value)
    fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
         return res.json({ status: "Success", message: "User deleted successfully" })
     });
